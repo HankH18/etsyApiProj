@@ -49,16 +49,24 @@ var ViewModel = Backbone.View.extend({
 	},
 	render: function() {
 		var containerNode = document.querySelector('.pageContent')
-		var htmlStr = ''
-		htmlStr += "<div class='itemPage'>"
-		htmlStr += 		"<div class='itemShop'"
-		htmlStr += 		"<a href='https://www.etsy.com/listing/" + this.model.get('listing_id') + "' target='blank'>"
-		htmlStr += 			"<button type='button' class='buyButton'>Buy Now!</button></a>"
-		htmlStr += 		"<h2 class='itemTitle'>" + this.model.get('title') + "</h2>"
-		htmlStr += 		"<img class='itemImg' src='" + this.model.get('Images')[0].url_570xN + "'>"
-		htmlStr += 		"<p class='itemDetail'" + this.model.get('description') + "</p>"
-		htmlStr += "</div>"
-		containerNode.innerHTML = htmlStr
+		var headerNode = document.querySelector('header')
+		var botHtmlStr = ''
+		var topHtmlStr = ''
+		botHtmlStr += "<div class='itemPage'>" 
+		botHtmlStr += 		"<div class='itemBottom'>"
+		botHtmlStr += 			"<h2 class='itemTitle'>" + this.model.get('title') + "</h2>"
+		botHtmlStr += 			"<img class='itemImg' src='" + this.model.get('Images')[0].url_570xN + "'>"
+		botHtmlStr += 			"<p class='itemDetail'" + this.model.get('description') + "</p>"
+		botHtmlStr += 			"<p class='itemPrice'>$" + this.model.get('price') + "</p>"
+		botHtmlStr += 			"<a href='https://www.etsy.com/listing/" + this.model.get('listing_id') + "' target='blank'>"
+		botHtmlStr += 				"<button type='button' class='buyButton'>Buy Now!</button></a></div>"
+		topHtmlStr += 		"<div class='itemTop'>"
+		topHtmlStr += 			"<h1 class='itemShop'>" + this.model.get('Shop').shop_name +"</h1>"
+		topHtmlStr += 			"<a href='" + this.model.get('Shop').url + "' target='blank'>"
+		topHtmlStr += 				"<button type='button' class='shopButtton'>Visit My Store!</button></a></div>"
+		topHtmlStr += "</div>"
+		containerNode.innerHTML = botHtmlStr
+		headerNode.innerHTML = topHtmlStr
 	}
 })
 

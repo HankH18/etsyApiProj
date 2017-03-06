@@ -1,30 +1,51 @@
 * {
 	box-sizing: border-box;
+	border: 2px dashed red;
+}
+div {
+	font-size: 0;
 }
 img {
 	max-width: 100%;
+	padding: 15px;
 }
 body {
 	text-align: center;
 	padding: 10px;
 	background: #BDFFFD;
+	font-family: Optima;
 }
 a {
 	text-decoration: none;
 }
-h1 h2 {
+h1,h2 {
+	color: #5E6973; 
+}
+h1 {
 	width: 50%;
-	color: #5E6973;
+	font-size: 40px;
+}
+h2 {
+	padding: 15%;
+	width: ;
 }
 p {
-	font-size: 18px;
+	font-size: 12px;
 	color: #6ABEA7;
+}
+header {
+	font-size: 25px;
+	border-bottom: 5px solid #7CFFC4;
+	padding: 0;
+	text-align: center;
 }
 .item {
 	width: 30%;
-	margin: 0 auto;
 	border: 2px solid #7CFFC4;
 }
 .loadingGif {
 	margin: 50px auto;
+}
+button {
+	margin-bottom: 25px;
 }
