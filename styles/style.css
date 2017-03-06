@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+}
+body {
+	text-align: center;
+	padding: 10px;
+	background: #BDFFFD;
+}
+a {
+	text-decoration: none;
+}
+h1 h2 {
+	width: 50%;
+	color: #5E6973;
+}
+p {
+	font-size: 18px;
+	color: #6ABEA7;
+}
+.item {
+	width: 30%;
+	margin: 0 auto;
+	border: 2px solid #7CFFC4;
+}
+.loadingGif {
+	margin: 50px auto;
+}
